@@ -1,5 +1,5 @@
 import React from 'react';
-import { axiosWithAuth } from '../utils/axiosWithAuth';
+import { axiosWithAuth } from '../utilities/axiosWithAuth';
 
 class Login extends React.Component {
   state = {
@@ -23,7 +23,7 @@ class Login extends React.Component {
 
   login = e => {
     e.preventDefault();
-    // login to retrieve the JWT token
+    // login to retrieve the JWT tokenyarn
     // add the token to localstorage
     // route to /protected (whatever landing page)
     axiosWithAuth()
@@ -42,15 +42,29 @@ class Login extends React.Component {
           <input
             type="text"
             name="username"
+            placeholder='User Name'
             value={this.state.credentials.username}
             onChange={this.handleChange}
           />
           <input
             type="password"
             name="password"
+            placeholder= 'Password...'
             value={this.state.credentials.password}
             onChange={this.handleChange}
           />
+          {/* <input
+            type="text"
+            name="age"
+            value={this.state.credentials.age}
+            onChange={this.handleChange}
+          />
+          <input
+            type="email"
+            name="username"
+            value={this.state.credentials.email}
+            onChange={this.handleChange}
+          /> */}
           <button>Log in</button>
         </form>
       </div>
