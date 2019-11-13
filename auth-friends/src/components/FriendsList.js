@@ -20,10 +20,7 @@ class Friends extends React.Component {
   }
 
   getData = () => {
-    // fetch data from the server
-    // the data is protected behind a token
-    // so our request needs to include an `Authorization: token` header
-    // TODO: Fetch this data - `/api/data` - and add the array of gas prices to state
+    
     axiosWithAuth()
       .get(`/api/friends`)
       .then(response => {
@@ -34,6 +31,7 @@ class Friends extends React.Component {
       })
       .catch(err => console.log("friends list error: ", err.response));
   };
+
 
   render() {
       
